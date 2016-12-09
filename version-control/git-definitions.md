@@ -21,4 +21,4 @@
   A merge conflict is a problem that occurs when you are trying 
   add your changes to the master file. The most common merge 
   conflict is when two branches have changed the same part of 
-  the same file. 
+  the same file. cool!
