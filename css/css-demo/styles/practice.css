@@ -1,0 +1,23 @@
+#contact-info { font-size: .8em;
+ 	}
+.job {border-radius: 5px;
+  background-color: #e9e5dc;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.list {font-size: .8em;}
+
+li:first-child{
+	color:red;
+}
+
+/* What does the "Cascading" part of Cascading Style Sheets mean? 
+		- The order to which changes are applied to an element. 
+	When there is a conflict between two CSS rules that select the same element, how does your browser decide which rule to use?
+		-Styling the child element differently from the parent element. CSS rules use the changes from the parent element.
+	What is a pseudoselector?
+		-Provides a special state for the element to be selected
+		-An example of this would be adding a color to an element when it is selected. 
+	How can you use CSS to select the child element of another element (for instance, a section inside another section, or an li inside a ul but not inside an ol?
+		- 
