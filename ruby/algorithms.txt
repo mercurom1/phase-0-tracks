@@ -1,0 +1,61 @@
+*/ 
+Algorithm for a robot using an elevator.
+	The elevator covers 20 floors with 5 floors on each row of the control panal.
+	The robot has to be programmed to figure out which floor to press.
+
+	#Assuming the robot is positioned right infront of the control panal
+	of the elevator. Then the robot should commit the following algorithm:
+		-If the floor number is between 1-5 
+			-Arm stays level
+				- If floor number is 1 then press
+				- If it is greater than 1 
+					-take floor number and multiply it by 2 inches. FN*2=inches
+					- move arm to the right that many inches and press.
+
+		-If the floor number is between 6-10
+			- Arm moves up 4 inches 
+			- If floor number is 6 then press
+			- If floor number is greater than 6 
+				-Take floor number subtract it by 5, then multiply it by 2 inches. (FN-5)*2=inches
+				-move arm to the right that many inches and press
+
+		-If the floor number is between 11-15
+			-Arm moves up 8 inches
+			-If floor number is 11 then press
+			-If floor number is greater than 11
+				-Take floor number and subtract it by 10, then multiply it by 2 inches. (FN-10)*=inches
+				-move arm to the right that many inches and press
+
+		-if the floor number is between 15-20
+			-Arm moves up 12 inches
+			- If the floor number is 15 then press
+			-If the floor number is greater than 15 
+				-Take floor number and subtract it by 15, then multiply it by 2 inches. (FN-15)*2=inches
+				-move arm to the right that many inches and press.
+/*
+
+
+*/ Walking up steps algorithm
+	-Start at the base of the steps
+	- Until you reach the top of the steps
+		-Lift right leg up
+		-Follow by lifting left leg up.
+		-Repeat
+/*
+
+*/ Making my bed algorithm
+	- Pick up Blanket
+	- Move hands until both of them are holding one of the two shorter ends of the blanket.
+		-Move left hand towards the left until it is positioned at the left end of that side.
+		-Move right hand towards the right until it is positioned at the right end of that side.
+			
+			-Place the right end of the blanket on the shorter side of the bed/furtherest side from where you are posiitoned. 
+				- Move blanket corner to the right until it is over the right end of the bed
+			-Place the left end of the blanket on the shorter side of the bed/furtherest side from where you are positioned.
+				-Move blanket corner to the left until it is over the left end of the bed.
+
+		-Place hands at the bottom of the blanket and pull the blanket down until it is flat. 
+/*
+
+
+
