@@ -7,7 +7,7 @@ puts "This is the original hash"
 p dogs
 
 names.map! do | name|
-	puts "These are the names in caps"
+	puts "This name is in caps"
 	p name.upcase
 end
 
@@ -38,11 +38,11 @@ p dogs
 
 
 p names 
-"Here we are going to pick the best name out of this list of names"
+puts "Here we are going to pick the best name out of this list of names"
 p names.select {|name| name == "MIKE"}
 
 p dogs
-"Here we are going to select the best dog out of this list of dogs"
+puts "Here we are going to select the best dog out of this list of dogs"
 p dogs.select {|dog, color| dog == "goldendoodle"}
 
 p names
@@ -54,21 +54,15 @@ puts "Now we are going to reverse the order of the dogs on the list"
 p dogs.sort{|a,b| a[1] <=> b[1]}
 
 
+wallet = [600, 100, 900, 700]
+puts "Here are my wallet with the amounts on each credit card #{wallet}"
+puts "I am going to shop until I am flat out broke"
 
-
-girl_names = ["Jess", "Katie", "Vikki", "Danielle"]
-
-girl_names.each do |name|
-	if name.length == 4
-		true
-	else 
-		name.delete
-	end
-	p girl_names
+until wallet.empty?
+	wallet.shift
 end
+puts "This is my wallet after the mall #{wallet}"
 
 
 
-#names > 4 letters long = true
-#iteration deletes names 4 letters long
-#left with an empty array 
+
