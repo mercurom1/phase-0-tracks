@@ -21,37 +21,64 @@ def next_consonant(str)
 end
 
 
-def alias_manager(str)
-	name_box = []
-	name_box = str.split
-	reverse_name = name_box.sort
-	first_name = reverse_name[1]
-	last_name = reverse_name[0]
-	vowel_last = next_vowel(last_name.downcase)
-	new_last = next_consonant(vowel_last.downcase)
-	new_name = []
-	new_name << new_last.capitalize!
-	vowel_first = next_vowel(first_name.downcase)
-	new_first = next_consonant(vowel_first.downcase)
-	new_name << new_first.capitalize!
-	return new_name.reverse.join(" ")
-end
+def alias_manager
+	puts "Please type in your name:"
+	puts "However, if you want to go back to the homepage type in 'back"
+	input = gets.chomp
+	if input.downcase == "back"
+		puts "EXIT"
+	elsif input.downcase != "back"
+		old_name = input 
+		name_box = []
+		name_box = old_name.split
+		reverse_name = name_box.sort
+		first_name = reverse_name[1]
+		last_name = reverse_name[0]
+		vowel_last = next_vowel(last_name.downcase)
+		new_last = next_consonant(vowel_last.downcase)
+		new_name = []
+		new_name << new_last.capitalize!
+		vowel_first = next_vowel(first_name.downcase)
+		new_first = next_consonant(vowel_first.downcase)
+		new_name << new_first.capitalize!
+		alias_name = new_name.reverse.join(" ")
+		puts "Your new alias is #{alias_name}"
+		name_storage = {}
+		name_storage.store(old_name, alias_name)
+		p name_storage
 
-
-old_name = nil 
-
-while old_name != "quit"
-	puts "Welcome to the alias manager."
-	puts "Please type in your name or type in 'quit' to exit the manager"
-	old_name = gets.chomp
-	if old_name.downcase == "quit"
-		puts "pease"
 	else 
-		p alias_manager(old_name)
-		alias_name = alias_manager(old_name)
+		puts "Response invaild, forced to exit."
 	end
-	name_storage = {old_name => alias_name}
-	p name_storage
 end
+
+
+
+
+
+
+user_input = nil
+
+while user_input != "quit"
+	puts "Welcome to the alias manager homepage"
+	puts "Press enter to access the alias manager or type 'quit to exit"
+	user_input = gets.chomp
+	if user_input.downcase == "quit"
+		puts "EXIT"
+			
+	else  
+		alias_manager
+		system_storage = {}
+		system_storage = alias_manager
+		system_storage.each do |real_name, spy_name|
+			puts "#{real_name}'s alias is: #{spy_name}."
+		end
+	end
+end
+
+
+
+
+
 
 
