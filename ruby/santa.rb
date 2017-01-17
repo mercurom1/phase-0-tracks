@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -13,7 +15,7 @@ class Santa
 		@ethnicity = ethnicity
 		puts "Initializing Santa instance ..."
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = rand(1..140)
 
 	end
 	 
@@ -28,24 +30,6 @@ class Santa
 		@reindeer_ranking.push(reindeer)
 		@reindeer_ranking
 	end
-
-
-	def age
-		@age
-	end
-
-	def ethnicity
-		@ethnicity
-	end
-
-	def age=(new_age)
-		@age = new_age
-	end
-
-	def ethnicity=(new_ethnicity)
-		@ethnicity = new_ethnicity
-	end
-	
 
 
 
@@ -63,6 +47,17 @@ example_genders.length.times do |i|
   puts "-------------------"
 end
 
-
+# Santa.new("Male", "White")
 # santas[1].get_mad_at("Rudolph")
 # santas[3].celebrate_birthday
+
+
+print_santa = nil 
+
+100.times do |i|
+	print_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "Santa: #{i}, is #{print_santa.age} years old, is #{print_santa.ethnicity}, and is a #{print_santa.gender}"
+end
+
+
+
