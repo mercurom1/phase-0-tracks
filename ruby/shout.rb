@@ -1,14 +1,25 @@
 
 module Shout
-  def self.yell_angrily(words)
-    words + "!!!" + " :("
+  def yell_angrily(words)
+    puts words + "!!!" + " :("
   end
 
-  def self.yell_happily(words)
-  	words.upcase + "!!!" + " =)"
+  def yell_happily(words)
+  	puts words.upcase + "!!!" + " =)"
   end
 end
 
 
+class Teacher
+	include Shout
+end
 
-p Shout.yell_happily("hahahaha")
+class Coach
+	include Shout
+end
+
+teacher = Teacher.new
+teacher.yell_angrily("You all got F's")
+
+coach = Coach.new
+coach.yell_happily("we won the game")
