@@ -50,7 +50,7 @@ lunch_order = {
 }
 
 
-puts "I decided to be a nice guy and take my co-workers lunch order"
+puts "I decided to be a nice guy and get lunch for my co-workers"
 p lunch_order
 
 puts "Of course on my way to the deli I get multiple text messages of my co workers changing their orders"
