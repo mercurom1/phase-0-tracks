@@ -95,4 +95,44 @@ STATE_DATA.each do |state, value|
 end
 
 #=======================================================================
+#reflect
+
+# 1.) Theres a hash rocket to identify the value towards the key. Or there
+#   is a simplier way of syntax which sets symbol for the key and after the
+#   symbol theres a semi-colon to identify the value for that key
+
+#2.) require_relative allows you to load file within another file. 
+#     require_relative allows you to access file across different folders
+#     require is mostly used for a broad set of ruby class files. like Math
+
+#3.) The simple way to iterate through a hash would be using .each
+#     Theres a bunch of other ways to iterate through a hash and they
+#     and they are all avaiable on ruby documentaion for hashes. 
+
+#4.) How the inputs are being used and how they effect the outputs of
+#   methods allows us to understand what inputs are necessary and what are
+#   not.
+
+#5.) How to iterate through hashy hashes, and the proper syntax. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Reflection Section
