@@ -18,4 +18,14 @@ function reverse(str) {
 
 
 //driver code
-console.log(reverse('mike'));
+
+var MyName = true;
+var MyAge = true;
+
+if (MyName && MyAge) {
+	console.log(reverse('mike'));
+} else {
+	console.log(reverse('billy'));
+}
+
+
