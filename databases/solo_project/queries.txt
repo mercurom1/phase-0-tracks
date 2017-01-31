@@ -1,0 +1,61 @@
+Michael Mercuro 8.3
+
+Release 2: Execute SQL Queries
+
+	1.) View the list of students.
+		command: select * from students;
+			output: 1|Tommy|16|true|90|2
+					2|Kara|15|false|72|1
+					3|Carl|17|true|78|3
+					4|Jessica|18|true|94|4
+					5|John|17|false|68|4
+					6|Jake|14|false|66|1
+
+	2.) Students listed as smart needs and average over 85,
+		Carl's account had to be updated.
+		command: update students set smart="false" where name="Carl";
+			output: 3|Carl|17|false|78|3
+
+	3.) Display all information in database.
+		command: select * from students, school_years where students.year_id = school_years.id;
+			output: 1|Tommy|16|true|90|2|2|sophmore
+					2|Kara|15|false|72|1|1|freshmen
+					3|Carl|17|false|78|3|3|junior
+					4|Jessica|18|true|94|4|4|senior
+					5|John|17|false|68|4|4|senior
+					6|Jake|14|false|66|1|1|freshmen
+
+	4.) Only show the student with their respective school year. 
+		command: select students.name, school_years.name from students join school_years on students.year_id = school_years.id;
+			output: Tommy|sophmore
+					Kara|freshmen
+					Carl|junior
+					Jessica|senior
+					John|senior
+					Jake|freshmen
+
+	5. Jake dropped out of school to become a truck so he has to be deleted 	from the database.
+		command: delete from students where name="Jake";
+			output: 1|Tommy|16|true|90|2
+					2|Kara|15|false|72|1
+					3|Carl|17|false|78|3
+					4|Jessica|18|true|94|4
+					5|John|17|false|68|4
+Release 3:
+
+	6.) Only show the students name, average, and year. 
+		command: select students.name, students.average, school_years.name from school_years left outer join students on students.year_id = school_years.id;
+			output: Kara|72|freshmen
+					Tommy|90|sophmore
+					Carl|78|junior
+					Jessica|94|senior
+					John|68|senior
+
+	7.) Only show the students name, age, and year.
+		command: select students.name, students.age, school_years.name from school_years inner join students on students.year_id = school_years.id;
+			output: Tommy|16|sophmore
+					Kara|15|freshmen
+					Carl|17|junior
+					Jessica|18|senior
+					John|17|senior
+
