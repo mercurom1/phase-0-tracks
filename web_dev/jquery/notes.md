@@ -25,6 +25,8 @@
 
 	* What help me the most was looking at examples online of how jQuery is used in html to manuplate the css of the page.
 
-	
+	* Only problem is that I don't know the best way to download the jQuery library on my terminal.
+
+	* For now, I am just going to use the CDN link for google to link jQuery to my html. 
 
 		
