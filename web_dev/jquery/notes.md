@@ -20,5 +20,11 @@
 			// action goes here
 			});
 		* The event is .click
+	
+	* jQuery helps html pages become more interaction with animation, visuals fading, and sliding throughout the page.
+
+	* What help me the most was looking at examples online of how jQuery is used in html to manuplate the css of the page.
+
+	
 
 		
