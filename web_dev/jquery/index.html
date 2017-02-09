@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manchester United!</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<button>Click to watch the red devil dance!</button>
+<section>
+	<img id="pic" src="pic.jpg" alt="Man U">
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			var pic = $("#pic");
+			pic.animate({left: '300px', opacity: '0.8'}, "slow");
+			pic.animate({height:'100px', opacity: '0.4'}, "slow");
+			pic.animate({width: '200px', opacity: '0.6'}, "slow");
+			pic.animate({height: '300px', opacity: '0.8'}, "slow");
+			pic.animate({width: '300px', opacity: '0.4'}, "slow");
+			pic.animate({height: '500px', opacity: '0.8'}, "slow");
+			pic.animate({width:'500px', opacity: '0.9'}, "slow");
+		});
+	});
+</script>
+
+</body>
+</html>
