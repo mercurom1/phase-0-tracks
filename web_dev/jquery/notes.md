@@ -28,5 +28,6 @@
 	* Only problem is that I don't know the best way to download the jQuery library on my terminal.
 
 	* For now, I am just going to use the CDN link for google to link jQuery to my html. 
+		* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 		
